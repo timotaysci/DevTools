@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Flask Database Example</title>
+    </head>
+    <body>
+        <form method="POST" action="/">
+            <input type="text" name="content" placeholder="Enter your message">
+            <input type="submit" value="Add message">
+        </form>
+        
+        <h2>Messages:</h2>
+        {% for message in messages %}
+        <p>{{ message.content }}</p>
+        {% endfor %}
+    </body>
+</html>
