@@ -16,17 +16,18 @@ class Message(db.Model):
 
 @app.route('/', methods=['GET', 'POST'])
 def home():
+    #Get content from the form, create a message from the content, add to database and commit those changes
     if request.method == 'POST':
         content = request.form['content']
         message = Message(content)
         db.session.add(message)
         db.session.commit()
         return 'Message added to the database.'
-
+    #get all messages and display in index.html
     messages = Message.query.all()
     return render_template('index.html', messages=messages)
 
-
+#Flask stuff - create database tables and run app in debug mode
 if __name__ == '__main__':
     with app.app_context():
         db.create_all()
