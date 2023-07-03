@@ -1,6 +1,6 @@
 # Dev Tools made by Timotaysci
 
-These are dev tools written for projects.
+These are dev tools and MVPs written for project work.
 
 
 ## seckeymaker.py
