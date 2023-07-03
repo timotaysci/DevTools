@@ -18,3 +18,8 @@ http://localhost:5000
 
 Authorised redirect URIs
 http://localhost:5000/login/google/authorized
+
+
+## Databases
+
+Simple MVP of a flask app that writes and reads from a database
