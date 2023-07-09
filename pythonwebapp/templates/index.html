@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Flask Bokeh Example</title>
+        {{ css_resources|safe }}
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    </head>
+    <body>
+        <h1 id="h1">Graphing</h1>
+        {{ plot_div|safe }}
+        {{ js_resources|safe }}
+        {{ plot_script|safe }}
+    </body>
+</html>
